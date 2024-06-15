@@ -1,0 +1,56 @@
+/* src/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    background: #333;
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav h1 {
+    margin: 0;
+  }
+  
+  nav a {
+    color: #fff;
+    margin: 0 1em;
+    text-decoration: none;
+  }
+  
+  button {
+    background: #007bff;
+    color: #fff;
+    padding: 1em;
+    border: none;
+    cursor: pointer;
+    margin: 1em 0;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  .meal-grid, .options, .recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .meal-grid > div, .options > div, .recipe-list > div {
+    flex: 1 1 30%;
+    margin: 1em;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0;
+  }
+  

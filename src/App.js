@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import CustomizeMealPlan from './components/CustomizeMealPlan';
+import RecipeCreationMethod from './components/RecipeCreationMethod';
+import GeneratedRecipes from './components/GeneratedRecipes';
+import Navigation from './components/Navigation';
+import './styles.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/create-meal" element={<CustomizeMealPlan />} />
+          <Route path="/create-recipe" element={<RecipeCreationMethod />} />
+          <Route path="/generated-recipes" element={<GeneratedRecipes />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
